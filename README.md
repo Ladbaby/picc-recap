@@ -1,5 +1,7 @@
 # picc-recap
 
+[![npm downloads](https://img.shields.io/npm/dt/@ladbabynpm/picc-recap.svg)](https://www.npmjs.com/package/@ladbabynpm/picc-recap)
+
 Claude Code-style **away summary** for [pi](https://pi.dev) — a faithful port of
 Claude Code's `services/awaySummary.ts` + `hooks/useAwaySummary.ts`.
 
@@ -86,7 +88,7 @@ $PI_CODING_AGENT_DIR/extension-data/picc-recap/config.json
 - `"small-fast"` (default) — picks a small/fast model from the registry (heuristic on
   ids containing `haiku`/`flash`/`nano`/`mini`/`small`/`fast`/`lite`/`instant`), preferring
   the current provider. Falls back to the current model if none match.
-- `"provider/modelId"` — an exact registry lookup (e.g. `"Tresor/claude-haiku"`).
+- `"provider/modelId"` — an exact registry lookup (e.g. `"Claude/claude-haiku"`).
 
 ## Deltas from Claude Code
 
