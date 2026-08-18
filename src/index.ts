@@ -111,8 +111,16 @@ function showSummary(ctx: ExtensionContext, recap: string): void {
 	if (ctx.mode !== "tui") return;
 	ctx.ui.setWidget(
 		WIDGET_KEY,
-		(_tui, theme) => new Text(theme.fg("dim", `${REFERENCE_MARK}  ${recap}`), 1, 0),
-		{ placement: "belowEditor" },
+		(_tui, theme) =>
+			new Text(
+				theme.fg("dim", REFERENCE_MARK) +
+					theme.fg("dim", "  ") +
+					theme.fg("dim", theme.bold("recap:")) +
+					theme.fg("dim", "  ") +
+					theme.fg("dim", theme.italic(recap)),
+				1,
+				0,
+			),
 	);
 }
 
@@ -204,7 +212,6 @@ function showProgressWidget(ctx: ExtensionContext): void {
 	ctx.ui.setWidget(
 		WIDGET_KEY,
 		(_tui, theme) => new Text(theme.fg("dim", `${REFERENCE_MARK}  Generating…`), 1, 0),
-		{ placement: "belowEditor" },
 	);
 }
 
@@ -352,7 +359,7 @@ function showDisabledError(ctx: ExtensionContext): void {
 	if (ctx.mode !== "tui") return;
 	ctx.ui.setWidget(
 		WIDGET_KEY,
-		(_tui, theme) => new Text(theme.fg("error", `${REFERENCE_MARK}  /away is disabled by config`), 1, 0),
-		{ placement: "belowEditor" },
+		(_tui, theme) =>
+			new Text(theme.fg("error", `${REFERENCE_MARK}  /away is disabled by config`), 1, 0),
 	);
 }
