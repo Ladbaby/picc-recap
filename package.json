@@ -12,11 +12,21 @@
 		"claude-code"
 	],
 	"license": "MIT",
+    "author": "ladbabynpm",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Ladbaby/picc-recap.git"
+    },
+    "homepage": "https://github.com/Ladbaby/picc-recap",
+    "bugs": {
+        "url": "https://github.com/Ladbaby/picc-recap/issues"
+    },
 	"files": [
 		"src/",
 		"README.md",
 		"package.json",
-		"tsconfig.json"
+		"tsconfig.json",
+		"LICENSE"
 	],
 	"pi": {
 		"extensions": [
